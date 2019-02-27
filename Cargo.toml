@@ -1,0 +1,7 @@
+[package]
+name = "expreum"
+version = "0.1.0"
+authors = ["haryu703"]
+edition = "2018"
+
+[dependencies]
