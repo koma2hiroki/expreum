@@ -5,3 +5,4 @@ authors = ["haryu703"]
 edition = "2018"
 
 [dependencies]
+web3 = "0.5.1"
