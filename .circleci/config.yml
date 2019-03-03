@@ -1,0 +1,19 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      - run:
+          name: setup
+          command: |
+            set -e
+            apt-get update
+            apt-get upgrade -y
+            apt-get install -y curl build-essential libssl-dev pkg-config git
+            curl https://sh.rustup.rs -sSf | sh -s -- -y
+      - checkout
+      - run:
+          name: test
+          command: ~/.cargo/bin/cargo test
